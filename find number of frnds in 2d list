@@ -1,0 +1,54 @@
+
+# Given a two dimensional list, 
+# for example [ [2,3],[3,4],[5]] person 2 is friends with 3 etc,
+# find how many friends each person has. Note, one person has no friends.
+
+lst = [ [2,3],[3,4],[5]]
+
+def friendnum(lst):
+	dct = {}
+	for i in lst:
+		for j in i:
+			if len(i) > 1:
+				dct[j] = dct.get(j,0) + 1
+			else:
+				dct[j] = 0
+	return dct
+
+print(friendnum(lst))
+
+
+# dct = {}
+
+# list1 = [ [2,3],[3,4],[5]]
+
+# f= list1
+# for i in range (len(f)):
+# 	for j in range(len(f[i])):
+# 		if len(f[i]) != 0:
+			
+# 			dct[f[i][j]] = dct.get(f[i][j], 0 ) + 1
+# 		else:
+# 			dct[f[i][j]] = 0
+
+# print(dct)
+# for k,v in dct.items():
+# 	print(k, 'has ' , v, ' friends')
+
+
+# f_d = dict(i for i in range (len(f)): )
+# print(f_d) 
+
+# def find_friends(lst):
+#     dct = {}
+#     for element1 in lst:
+#     	print(element1)
+#     	for element2 in element1:
+#         	print(element2)
+#         	if len(element1) != 1:
+#         		dct[element2] = dct.get(element2,0) + 1
+#         	else:
+#         		dct[element2] = 0
+#     return dct
+
+# print( find_friends(list1) )
